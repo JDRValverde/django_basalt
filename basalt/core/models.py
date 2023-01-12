@@ -11,6 +11,9 @@ User = get_user_model()
 class Profile(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     id_user = models.IntegerField()
+    first_name = models.TextField(max_length=100)
+    last_name = models.TextField(max_length=100)
+    email = models.EmailField(max_length=250)
     bio = models.TextField(blank=True)
     profile_image = models.ImageField(
         upload_to='profile_images', default='default_user_image.png')
