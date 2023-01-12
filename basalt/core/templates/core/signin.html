@@ -1,0 +1,154 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Basalto - The Social Network</title>
+    
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static '/images/favicon.ico' %}">
+
+    <!-- CSS
+	============================================ -->
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bicon.min.css' %}">
+    <!-- Flat Icon CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/flaticon.css' %}">
+    <!-- audio & video player CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/plyr.css' %}">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/slick.min.css' %}">
+    <!-- nice-select CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/nice-select.css' %}">
+    <!-- perfect scrollbar css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/perfect-scrollbar.css' %}">
+    <!-- light gallery css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/lightgallery.min.css' %}">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">
+
+</head>
+
+<body class="bg-transparent">
+
+    <main>
+        <div class="main-wrapper pb-0 mb-0">
+            <div class="timeline-wrapper overflow-hidden">
+                <div class="timeline-header">
+                    <div class="container-fluid p-0">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-lg-6">
+                                <div class="timeline-logo-area d-flex align-items-center">
+                                    <div class="timeline-logo">
+                                        <a href="index.html">
+                                            <img src="{% static '/images/logo/logo.png' %}" alt="timeline logo">
+                                        </a>
+                                    </div>
+                                    <div class="timeline-tagline">
+                                        <h6 class="tagline">Basalt - Connect and share with the igneous in your life</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="login-area">
+                                    <div class="row align-items-center">
+                                        <div class="col-12 col-sm">
+                                            <input type="text" placeholder="Email or Userame" class="single-field">
+                                        </div>
+                                        <div class="col-12 col-sm">
+                                            <input type="password" placeholder="Password" class="single-field">
+                                        </div>
+                                        <div class="col-12 col-sm-auto">
+                                            <button class="login-btn">Login</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-page-wrapper">
+                    <div class="container-fluid p-0">
+                        <div class="row g-0">
+                            <div class="col-lg-6 order-2 order-lg-1">
+                                <div class="timeline-bg-content bg-img" data-bg="{% static 'images/timeline/adda-timeline.jpg' %}">
+                                    <h3 class="timeline-bg-title">Connect With Developers And Get Magmatized</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 order-1 order-lg-2 d-flex align-items-center justify-content-center">
+                                <div class="signup-form-wrapper">
+                                    <h1 class="create-acc text-center">Create An Account</h1>
+                                    <div class="signup-inner text-center">
+                                        <br>
+                                        <h3 class="title">Wellcome to Basalt</h3>
+                                        <form class="signup-inner--form" method="POST">
+                                            {% csrf_token %}
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <input type="text" name="username" placeholder="Username" class="single-field">
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="email" name="email" placeholder="Email" class="single-field">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="password" name="password" placeholder="Password" class="single-field">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="password" name="password2" placeholder="Confirm Password" class="single-field">
+                                                </div>
+                                                <div class="col-12">
+                                                    <button type="submit" class="submit-btn">Create Account</button>
+                                                </div>
+                                            </div>
+                                            <h6 class="terms-condition">Please read & accept the <a href="#">terms of use</a></h6>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- JS
+============================================ -->
+
+    <!-- Modernizer JS -->
+    <script src="{% static 'js/vendor/modernizr-3.6.0.min.js' %}"></script>
+    <!-- jQuery JS -->
+    <script src="{% static 'js/vendor/jquery-3.6.0.min.js' %}"></script>
+    <!-- Bootstrap JS -->
+    <script src="{% static 'js/vendor/bootstrap.bundle.min.js' %}"></script>
+    <!-- Slick Slider JS -->
+    <script src="{% static 'js/plugins/slick.min.js' %}"></script>
+    <!-- nice select JS -->
+    <script src="{% static 'js/plugins/nice-select.min.js' %}"></script>
+    <!-- audio video player JS -->
+    <script src="{% static 'js/plugins/plyr.min.js' %}"></script>
+    <!-- perfect scrollbar js -->
+    <script src="{% static 'js/plugins/perfect-scrollbar.min.js' %}"></script>
+    <!-- light gallery js -->
+    <script src="{% static 'js/plugins/lightgallery-all.min.js' %}"></script>
+    <!-- image loaded js -->
+    <script src="{% static 'js/plugins/imagesloaded.pkgd.min.js' %}"></script>
+    <!-- isotope filter js -->
+    <script src="{% static 'js/plugins/isotope.pkgd.min.js' %}"></script>
+    <!-- Main JS -->
+    <script src="{% static 'js/main.js' %}"></script>
+    
+
+</body>
+
+</html>
