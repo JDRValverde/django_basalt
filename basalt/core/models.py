@@ -13,7 +13,7 @@ class Profile(models.Model):
     id_user = models.IntegerField()
     first_name = models.TextField(max_length=100)
     last_name = models.TextField(max_length=100)
-    email = models.EmailField(max_length=250)
+    email = models.EmailField(max_length=250, blank=True)
     bio = models.TextField(blank=True)
     profile_image = models.ImageField(
         upload_to='profile_images', default='default_user_image.png')

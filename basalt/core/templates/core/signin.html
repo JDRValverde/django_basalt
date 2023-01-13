@@ -1,4 +1,5 @@
 {% load static %}
+
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -19,23 +20,23 @@
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
     <!-- Icon Font CSS -->
-    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bicon.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bicon.min.css' %}">
     <!-- Flat Icon CSS -->
-    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
     <!-- audio & video player CSS -->
-    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/plyr.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/plyr.css' %}">
     <!-- Slick CSS -->
-    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/slick.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slick.min.css' %}">
     <!-- nice-select CSS -->
-    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}">
     <!-- perfect scrollbar css -->
-    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/perfect-scrollbar.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/perfect-scrollbar.css' %}">
     <!-- light gallery css -->
-    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/lightgallery.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/lightgallery.min.css' %}">
     <!-- Main Style CSS -->
-    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
 
 </head>
 
@@ -59,21 +60,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="login-area">
-                                    <div class="row align-items-center">
-                                        <div class="col-12 col-sm">
-                                            <input type="text" placeholder="Email or Userame" class="single-field">
-                                        </div>
-                                        <div class="col-12 col-sm">
-                                            <input type="password" placeholder="Password" class="single-field">
-                                        </div>
-                                        <div class="col-12 col-sm-auto">
-                                            <button class="login-btn">Login</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -87,10 +73,21 @@
                             </div>
                             <div class="col-lg-6 order-1 order-lg-2 d-flex align-items-center justify-content-center">
                                 <div class="signup-form-wrapper">
-                                    <h1 class="create-acc text-center">Create An Account</h1>
+                                    <h1 class="create-acc text-center"><a href="signup" class="">Create An Account</a></h1>
                                     <div class="signup-inner text-center">
                                         <br>
                                         <h3 class="title">Wellcome to Basalt</h3>
+                                        <div>
+                                            <style>
+                                                h5 {
+                                                    color: red;
+                                                }
+                                            </style>
+                                            {% for message in messages %}
+                                            <h5>{{message}}</h5>
+                                            {% endfor %}
+                        
+                                        </div>
                                         <form class="signup-inner--form" method="POST">
                                             {% csrf_token %}
                                             <div class="row">
@@ -98,16 +95,10 @@
                                                     <input type="text" name="username" placeholder="Username" class="single-field">
                                                 </div>
                                                 <div class="col-12">
-                                                    <input type="email" name="email" placeholder="Email" class="single-field">
-                                                </div>
-                                                <div class="col-md-6">
                                                     <input type="password" name="password" placeholder="Password" class="single-field">
                                                 </div>
-                                                <div class="col-md-6">
-                                                    <input type="password" name="password2" placeholder="Confirm Password" class="single-field">
-                                                </div>
                                                 <div class="col-12">
-                                                    <button type="submit" class="submit-btn">Create Account</button>
+                                                    <button type="submit" class="submit-btn">Login</button>
                                                 </div>
                                             </div>
                                             <h6 class="terms-condition">Please read & accept the <a href="#">terms of use</a></h6>
@@ -126,27 +117,27 @@
 ============================================ -->
 
     <!-- Modernizer JS -->
-    <script src="{% static 'js/vendor/modernizr-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/modernizr-3.6.0.min.js' %}"></script>
     <!-- jQuery JS -->
-    <script src="{% static 'js/vendor/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/jquery-3.6.0.min.js' %}"></script>
     <!-- Bootstrap JS -->
-    <script src="{% static 'js/vendor/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/bootstrap.bundle.min.js' %}"></script>
     <!-- Slick Slider JS -->
-    <script src="{% static 'js/plugins/slick.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/slick.min.js' %}"></script>
     <!-- nice select JS -->
-    <script src="{% static 'js/plugins/nice-select.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/nice-select.min.js' %}"></script>
     <!-- audio video player JS -->
-    <script src="{% static 'js/plugins/plyr.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/plyr.min.js' %}"></script>
     <!-- perfect scrollbar js -->
-    <script src="{% static 'js/plugins/perfect-scrollbar.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/perfect-scrollbar.min.js' %}"></script>
     <!-- light gallery js -->
-    <script src="{% static 'js/plugins/lightgallery-all.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/lightgallery-all.min.js' %}"></script>
     <!-- image loaded js -->
-    <script src="{% static 'js/plugins/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/imagesloaded.pkgd.min.js' %}"></script>
     <!-- isotope filter js -->
-    <script src="{% static 'js/plugins/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/isotope.pkgd.min.js' %}"></script>
     <!-- Main JS -->
-    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
     
 
 </body>
